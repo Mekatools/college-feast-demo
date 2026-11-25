@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic setup so text and emojis display properly on all devices -->
   <meta charset="UTF-8" />
-  <!-- Makes the website fit phone screens properly (mobile-first!) -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>[GROUP NAME] — [COLLEGE NAME] Feast &amp; Events (Demo)</title>
   <meta name="description" content="Official demo website for [GROUP NAME] at [COLLEGE NAME]. Explore upcoming college feast events, team, gallery, and volunteer sign-ups." />
 
-  <!-- Free Google Fonts: "Syne" for bold festival headings, "Plus Jakarta Sans" for clean reading -->
+  <!-- Free Google Fonts: Bricolage Grotesque (bold & readable headlines) + DM Sans (clean body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 
-  <!-- Connects our design & colors file (we will create this next!) -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Small banner at the very top letting seniors know this is a demo -->
+  <!-- Top Demo Banner -->
   <div class="demo-banner" role="note">
     <span>✨ <strong>Demo Preview:</strong> Built for [GROUP NAME] • [COLLEGE NAME]</span>
   </div>
@@ -31,7 +28,6 @@
         <span>[GROUP NAME]</span>
       </a>
 
-      <!-- Hamburger button (only visible on small phone screens) -->
       <button
         id="nav-toggle"
         class="nav-toggle"
@@ -45,7 +41,6 @@
         <span></span>
       </button>
 
-      <!-- Navigation Links -->
       <nav id="main-nav" class="main-nav" aria-label="Main navigation">
         <a href="#events">Events</a>
         <a href="#team">Team</a>
@@ -76,7 +71,6 @@
           </div>
         </div>
 
-        <!-- Countdown Card (Date comes from data.js!) -->
         <div class="countdown-card reveal" aria-live="polite">
           <span class="countdown-badge">Next Big Feast</span>
           <h2 id="countdown-event-name">Annual College Feast</h2>
@@ -105,16 +99,14 @@
       </div>
     </section>
 
-    <!-- 2. ANIMATED STATS BAR (Numbers come from data.js!) -->
+    <!-- 2. ANIMATED STATS BAR -->
     <section class="stats-section" aria-label="Feast highlights">
       <div class="container">
-        <div id="stats-grid" class="stats-grid">
-          <!-- JavaScript fills these animated counters from data.js -->
-        </div>
+        <div id="stats-grid" class="stats-grid"></div>
       </div>
     </section>
 
-    <!-- 3. EVENTS SECTION (Cards + Upcoming/Past Filter) -->
+    <!-- 3. EVENTS SECTION -->
     <section id="events" class="section">
       <div class="container">
         <div class="section-header reveal">
@@ -123,7 +115,6 @@
             <h2>Feast &amp; Campus Events</h2>
           </div>
 
-          <!-- Filter Buttons -->
           <div class="filter-bar" role="group" aria-label="Filter events">
             <button class="filter-btn active" type="button" data-filter="all">All</button>
             <button class="filter-btn" type="button" data-filter="upcoming">Upcoming</button>
@@ -131,13 +122,11 @@
           </div>
         </div>
 
-        <div id="events-grid" class="events-grid">
-          <!-- JavaScript fills event cards here from data.js -->
-        </div>
+        <div id="events-grid" class="events-grid"></div>
       </div>
     </section>
 
-    <!-- 4. TEAM SECTION (Tap or Click to Expand/Flip) -->
+    <!-- 4. TEAM SECTION -->
     <section id="team" class="section section-tinted">
       <div class="container">
         <div class="section-header reveal">
@@ -148,13 +137,11 @@
           </div>
         </div>
 
-        <div id="team-grid" class="team-grid">
-          <!-- JavaScript fills team cards here from data.js -->
-        </div>
+        <div id="team-grid" class="team-grid"></div>
       </div>
     </section>
 
-    <!-- 5. GALLERY SECTION (Tap to open Lightbox) -->
+    <!-- 5. GALLERY SECTION -->
     <section id="gallery" class="section">
       <div class="container">
         <div class="section-header reveal">
@@ -165,13 +152,11 @@
           </div>
         </div>
 
-        <div id="gallery-grid" class="gallery-grid">
-          <!-- JavaScript fills gallery tiles here from data.js -->
-        </div>
+        <div id="gallery-grid" class="gallery-grid"></div>
       </div>
     </section>
 
-    <!-- 6. VOLUNTEER / REGISTRATION FORM -->
+    <!-- 6. VOLUNTEER FORM -->
     <section id="volunteer" class="section section-dark">
       <div class="container volunteer-layout">
         <div class="volunteer-info reveal">
@@ -189,7 +174,6 @@
         </div>
 
         <div class="form-card reveal">
-          <!-- Front-end demo form (validated by script.js) -->
           <form id="volunteer-form" class="volunteer-form" novalidate>
             <div class="form-group">
               <label for="vol-name">Full Name *</label>
@@ -232,7 +216,6 @@
             <p class="form-note">Demo mode: This checks your inputs in the browser without sending data to a server.</p>
           </form>
 
-          <!-- Success screen shown after valid submission -->
           <div id="form-success" class="form-success" hidden>
             <div class="success-icon" aria-hidden="true">✓</div>
             <h3>You’re on the Demo List!</h3>
@@ -262,7 +245,7 @@
     </div>
   </footer>
 
-  <!-- LIGHTBOX MODAL (Hidden until a gallery photo is tapped) -->
+  <!-- LIGHTBOX MODAL -->
   <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Gallery photo viewer">
     <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Close photo viewer">✕</button>
     <button id="lightbox-prev" class="lightbox-nav lightbox-prev" type="button" aria-label="Previous photo">‹</button>
@@ -278,7 +261,6 @@
     <button id="lightbox-next" class="lightbox-nav lightbox-next" type="button" aria-label="Next photo">›</button>
   </div>
 
-  <!-- Scripts loaded at the bottom so the page shows up quickly first! -->
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
