@@ -1,6 +1,5 @@
 /* =========================================================
-   1. EDITORIAL NIGHT POSTER VARIABLES
-   Matte Black + Bone White + Acid Volt (Zero AI Gradients!)
+   1. THEME VARIABLES (Colors will become Indigo/Marigold/Pink in Step 2)
    ========================================================= */
 :root {
   /* Surfaces */
@@ -12,21 +11,21 @@
   --text-main: #f2efe9;
   --text-muted: #9a968e;
 
-  /* Sharp Poster Accents */
+  /* Accents */
   --accent-volt: #d4ff00;
   --accent-orange: #ff5a1f;
   --accent-ice: #e4e4e7;
   --accent-danger: #ff3b5c;
 
-  /* Architectural Hairline Borders */
+  /* Borders */
   --border: rgba(242, 239, 233, 0.16);
   --border-strong: rgba(242, 239, 233, 0.45);
 
-  /* Typography */
-  --font-display: "Syne", system-ui, -apple-system, sans-serif;
-  --font-body: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  /* New Readable & Punchy Fonts */
+  --font-display: "Bricolage Grotesque", system-ui, -apple-system, sans-serif;
+  --font-body: "DM Sans", system-ui, -apple-system, sans-serif;
 
-  /* Sharp Geometry */
+  /* Spacing & Geometry */
   --container-max: 1140px;
   --section-pad: 4.5rem 0;
   --radius: 2px;
@@ -63,9 +62,8 @@ svg {
 h1, h2 {
   font-family: var(--font-display);
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  line-height: 1.02;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
   margin: 0 0 0.85rem;
 }
 
@@ -135,18 +133,22 @@ a {
 }
 
 /* =========================================================
-   3. DEMO STRIP & SHARP NAVBAR
+   3. FIXED DEMO BANNER & NAVBAR
    ========================================================= */
 .demo-banner {
   background: var(--bg-surface);
   border-bottom: 1px solid var(--border);
-  color: var(--text-muted);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  font-size: 0.76rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
+  min-height: 42px;
+  padding: 0.65rem 1rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  font-weight: 500;
 }
 
 .demo-banner strong {
@@ -177,9 +179,8 @@ a {
   text-decoration: none;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   letter-spacing: -0.01em;
-  text-transform: uppercase;
 }
 
 .brand-dot {
@@ -231,9 +232,9 @@ a {
 .main-nav a:not(.btn) {
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--text-muted);
   transition: color 0.2s ease;
 }
@@ -243,7 +244,7 @@ a {
 }
 
 /* =========================================================
-   4. SHARP EDITORIAL BUTTONS
+   4. BUTTONS
    ========================================================= */
 .btn {
   display: inline-flex;
@@ -254,9 +255,7 @@ a {
   border-radius: var(--radius);
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 0.84rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 0.88rem;
   text-decoration: none;
   border: 1px solid transparent;
   cursor: pointer;
@@ -274,7 +273,7 @@ a {
 
 .btn-sm {
   padding: 0.52rem 1rem;
-  font-size: 0.76rem;
+  font-size: 0.8rem;
 }
 
 .btn-full {
@@ -316,7 +315,7 @@ a {
 }
 
 /* =========================================================
-   5. HERO (Architectural Grid + Ticket-Stub Countdown)
+   5. HERO & COUNTDOWN
    ========================================================= */
 .hero {
   background-color: var(--bg-main);
@@ -340,20 +339,20 @@ a {
   padding-left: 0.75rem;
   color: var(--text-muted);
   font-weight: 700;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   margin-bottom: 1.25rem;
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 6.2vw, 4.35rem);
+  font-size: clamp(2.15rem, 6vw, 4rem);
   color: var(--text-main);
 }
 
 .hero-subtitle {
   color: var(--text-muted);
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   max-width: 48ch;
   margin-bottom: 2rem;
 }
@@ -368,7 +367,6 @@ a {
   gap: 0.85rem;
 }
 
-/* Festival Pass / Ticket-Stub Countdown */
 .countdown-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-strong);
@@ -391,7 +389,6 @@ a {
 
 .countdown-card h2 {
   font-family: var(--font-body);
-  text-transform: none;
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 1.25rem;
@@ -429,12 +426,12 @@ a {
 
 .countdown-status {
   margin: 1.1rem 0 0;
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   color: var(--text-muted);
 }
 
 /* =========================================================
-   6. EDITORIAL STATS STRIP (No Floating SaaS Cards)
+   6. STATS STRIP
    ========================================================= */
 .stats-section {
   background: var(--bg-main);
@@ -478,7 +475,7 @@ a {
 }
 
 /* =========================================================
-   7. EVENTS SECTION & SHARP FILTERS
+   7. EVENTS SECTION & FILTERS
    ========================================================= */
 .filter-bar {
   display: inline-flex;
@@ -493,7 +490,7 @@ a {
   background: transparent;
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-muted);
@@ -589,12 +586,12 @@ a {
 
 .event-body p {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   margin: 0;
 }
 
 /* =========================================================
-   8. TEAM SECTION (Tap to Expand)
+   8. TEAM SECTION
    ========================================================= */
 .team-grid {
   display: grid;
@@ -665,7 +662,7 @@ a {
 }
 
 .team-role {
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: var(--text-muted);
   margin: 0;
@@ -687,7 +684,7 @@ a {
   margin-top: 1rem;
   padding-top: 0.9rem;
   border-top: 1px dashed var(--border);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
 }
 
@@ -703,7 +700,7 @@ a {
 .team-hint {
   display: block;
   margin-top: 0.8rem;
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -760,7 +757,6 @@ a {
   letter-spacing: 0.04em;
 }
 
-/* Lightbox Modal */
 .lightbox {
   position: fixed;
   inset: 0;
@@ -899,7 +895,7 @@ a {
 label {
   display: block;
   font-weight: 700;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-muted);
@@ -921,7 +917,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  color: #55524d;
+  color: #6b6862;
 }
 
 select option {
@@ -951,7 +947,7 @@ textarea:focus {
 
 .form-note {
   margin: 0.85rem 0 0;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
   text-align: center;
 }
@@ -994,14 +990,13 @@ textarea:focus {
 .footer-brand {
   font-family: var(--font-display);
   font-weight: 800;
-  text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.05rem;
   margin-bottom: 0.35rem;
 }
 
 .footer-copy {
   color: var(--text-muted);
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   margin: 0;
 }
 
@@ -1015,7 +1010,7 @@ textarea:focus {
   text-decoration: none;
   color: var(--text-muted);
   font-weight: 600;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
