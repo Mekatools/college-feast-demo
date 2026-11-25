@@ -1,0 +1,26 @@
+=========================================================
+IMAGE CREDITS & HOW TO ADD YOUR OWN PHOTOS LATER
+=========================================================
+
+1. CURRENT DEMO ARTWORK:
+   Right now, all event and gallery visuals in this demo are
+   custom inline SVG illustrations generated locally inside
+   script.js. That means zero external links can break and
+   the site loads super fast on mid-range phones!
+
+2. HOW TO ADD YOUR REAL COLLEGE PHOTOS LATER:
+   Step A: Compress your photos first (keep them under 200-300 KB
+           using a free compressor or phone resize) so the page
+           stays fast on mobile data.
+   Step B: In GitHub, open the "assets/images/" folder and click
+           "Add file" -> "Upload files" to upload your photos
+           (for example: concert-night.jpg, food-stall.jpg).
+   Step C: Open "data.js", find the event or gallery item, and
+           change:
+               image: "",
+           to:
+               image: "assets/images/concert-night.jpg",
+
+3. IF YOU USE FREE STOCK PHOTOS (UNSPLASH / PEXELS):
+   Write the photographer's name and photo link right here in
+   this file to keep proper credits!
